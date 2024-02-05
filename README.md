@@ -6,14 +6,14 @@ generate.shを叩く前提の内容になっているので注意
 ## ディレクトリ構成
 ```
 .
-├── generate.sh                             #実行シェル
-├── network-generator.yml                   #network-config生成用docker compose
-├── user-data-generator.yml                 #user-data生成用docker compose
-├── generated                               #テンプレートから生成されたファイルが格納されている場所
-├── templates                               #生成したいテンプレートが置かれている場所 
-├── utils                                   #パスワードハッシュ化などのユーティリティ
-├── values                                  #jinja2で置き換えたい値を格納している場所
-└── values-secret                           #jinja2で置き換えたい値(シークレットな)を格納している場所
+├── generate.sh                 #実行シェル
+├── network-generator.yml       #network-config生成用docker compose
+├── user-data-generator.yml     #user-data生成用docker compose
+├── generated/                  #テンプレートから生成されたファイルが格納されている場所
+├── templates/                  #生成したいテンプレートが置かれている場所 
+├── utils/                      #パスワードハッシュ化などのユーティリティ
+├── values/                     #jinja2で置き換えたい値を格納している場所
+└── values-secret/              #jinja2で置き換えたい値(シークレットな)を格納している場所
 ```
 
 ### generated
