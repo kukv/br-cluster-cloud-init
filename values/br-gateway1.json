@@ -1,0 +1,25 @@
+{
+    "hostname": "br-gateway1",
+    "users": {
+        "root": {
+            "password": "<<Set it up yourself>>"
+        },
+        "operation_user": {
+            "name": "bradmin",
+            "password": "<<Set it up yourself>>",
+            "public_key": "<<Set it up yourself>>"
+        }
+    },
+    "enable_wireless_network": true,
+    "networks": {
+        "internal": {
+            "gateway_ip": "172.22.10.1/24"
+        },
+        "external": {
+            "gateway_ip": "192.168.2.50/24",
+            "router_ip": "192.168.2.1",
+            "ssid": "<<Set it up yourself>>",
+            "password": "<<Set it up yourself>>"
+        }
+    }
+}
