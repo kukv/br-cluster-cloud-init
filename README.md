@@ -1,19 +1,19 @@
 # br-cluster-cloud-init
 
-cloud-initの設定置き場
-generate.shを叩く前提の内容になっているので注意
+cloud-initの設定を管理するリポジトリ
 
 ## ディレクトリ構成
+
 ```
 .
-├── generate.sh                 #実行シェル
+├── generate.sh                 #自動生成実行シェル
+├── generated/                  #テンプレートから生成されたcloud-initの設定ファイルが格納されている場所
 ├── network-generator.yml       #network-config生成用docker compose
+├── templates/                  #cloud-initのテンプレートが置かれている場所 
 ├── user-data-generator.yml     #user-data生成用docker compose
-├── generated/                  #テンプレートから生成されたファイルが格納されている場所
-├── templates/                  #生成したいテンプレートが置かれている場所 
-├── utils/                      #パスワードハッシュ化などのユーティリティ
 ├── values/                     #jinja2で置き換えたい値を格納している場所
 └── values-secret/              #jinja2で置き換えたい値(シークレットな)を格納している場所
+                                #  https://github.com/kukv/br-cluster-cloud-init-secret
 ```
 
 ### generated
@@ -45,7 +45,7 @@ jinja2に準拠したテンプレートファイルを作成して格納する
 
 ## cloud-init用のファイル生成方法
 
-br-clusterディレクトリ直下に`gateway-list`, `cluster-list`ファイルが必要
+ひとつ上のディレクトリ階層(br-clusterディレクトリ直下)に`gateway-list`, `cluster-list`ファイルが必要
 
 上記のディレクトリ構成通りに構成できるのであればbuild.shを叩けばすぐ動く
 ```
