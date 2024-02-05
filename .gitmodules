@@ -1,0 +1,3 @@
+[submodule "values-secret"]
+	path = values-secret
+	url = git@github.com:kukv/br-cluster-cloud-init-secret.git
