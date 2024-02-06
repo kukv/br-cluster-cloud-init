@@ -29,6 +29,7 @@ users:
   - name: {{ users.operation_user.name }}
     groups: users,adm,dialout,audio,netdev,video,plugdev,cdrom,games,input,gpio,spi,i2c,render,sudo
     shell: /bin/bash
+    sudo: ALL=(ALL) NOPASSWD:ALL
     lock_passwd: false
     passwd: {{ users.operation_user.password }}
     ssh_authorized_keys:
